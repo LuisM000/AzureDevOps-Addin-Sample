@@ -9,7 +9,7 @@ trigger:
 jobs:
   - job: macOS
     pool:
-        vmImage: 'macOS-latest'
+      name: My-Agent
 
     steps:
     - task: NuGetToolInstaller@0
