@@ -30,7 +30,7 @@ using Mono.Addins.Description;
 [assembly: Addin(
     "VSMacAddinSample",
     Namespace = "VSMacAddinSample",
-    Version = "0.1.0"
+    Version = "0.1.1"
 )]
 
 [assembly: AddinName("VSMacAddinSample")]
