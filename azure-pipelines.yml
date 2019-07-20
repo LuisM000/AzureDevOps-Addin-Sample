@@ -1,0 +1,22 @@
+trigger:
+  branches:
+    include:
+    - master
+  tags:
+    include:
+      - '*'
+
+jobs:
+  - job: macOS
+    pool:
+        vmImage: 'macOS-latest'
+
+    steps:
+    - task: NuGetToolInstaller@0
+
+    - task: NuGetCommand@2
+      inputs:
+        restoreSolution: '**/*.sln'
+       
+    - script: msbuild /p:Configuration=Release VSMacAddinSample/VSMacAddinSample.csproj
+      displayName: 'Build VSMacAddinSample'
