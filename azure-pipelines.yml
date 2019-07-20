@@ -9,7 +9,7 @@ trigger:
 jobs:
   - job: macOS
     pool:
-      name: My-Agent
+      name: My-MacBook
 
     steps:
     - task: NuGetToolInstaller@0
